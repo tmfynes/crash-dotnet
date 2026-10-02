@@ -1,0 +1,14 @@
+---
+applications:
+  - name: crash-dotnet
+    memory: 512M
+    disk_quota: 1G
+    instances: 2
+    timeout: 180
+    stack: cflinuxfs4
+    buildpacks:
+      - dotnet_core_buildpack
+    host: crash-dotnet
+    env:
+      ASPNETCORE_ENVIRONMENT: Production
+      DOTNET_SYSTEM_GLOBALIZATION_INVARIANT: "1"
